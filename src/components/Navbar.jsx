@@ -5,7 +5,7 @@ import AppContext from '../context/AppContext'
 
 const Navbar = () => {
 
-  const [searchTerm, setSearchTerm] = useState(" ")
+  const [searchTerm, setSearchTerm] = useState("")
   const navigate = useNavigate();
   const location = useLocation();
   const { setFilteredData, products, logout, isAuthenticated, cart } = useContext(AppContext);
@@ -23,7 +23,7 @@ const Navbar = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     navigate(`/product/search/${searchTerm}`);
-    setSearchTerm(" ")
+    setSearchTerm("")
   };
 
   return (
@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className="nav sticky-top">
         <div className="nav_bar">
           <Link to={'/'} className="left" style={{ textDecoration: 'none', color: "white" }}>
-            <h3>Eshop_cart</h3>
+            <h3>ShopEasy</h3>
           </Link>
           <form className="search_bar" onSubmit={submitHandler}>
             <span className="material-symbols-outlined">
@@ -86,14 +86,14 @@ const Navbar = () => {
           <div className="sub_bar">
             <div className="items" onClick={() => setFilteredData(products)}>No Filter</div>
             <div className="items" onClick={() => filterbyCategory("mobiles")}>Mobiles</div>
-            <div className="items" onClick={() => filterbyCategory("laptops")}>Laptop</div>
+            <div className="items" onClick={() => filterbyCategory("laptop")}>Laptop</div>
             <div className="items" onClick={() => filterbyCategory("cameras")}>Cameras</div>
             <div className="items" onClick={() => filterbyCategory("headphones")}>Headphones</div>
+            <div className="items" onClick={() => filterbyPrice(5999)}>5999</div>
             <div className="items" onClick={() => filterbyPrice(15999)}>15999</div>
-            <div className="items" onClick={() => filterbyPrice(25999)}>25999</div>
+            <div className="items" onClick={() => filterbyPrice(29999)}>29999</div>
+            <div className="items" onClick={() => filterbyPrice(39999)}>39999</div>
             <div className="items" onClick={() => filterbyPrice(49999)}>49999</div>
-            <div className="items" onClick={() => filterbyPrice(69999)}>69999</div>
-            <div className="items" onClick={() => filterbyPrice(89999)}>89999</div>
           </div>
         )}
 

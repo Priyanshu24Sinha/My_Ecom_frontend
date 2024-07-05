@@ -32,7 +32,7 @@ const Login = () => {
 
   return (
     <>
-      <div className="container my-5 p-4" style={{ width: "600px", border: '2px solid yellow', borderRadius: '10px' }}>
+      <div className="container my-5 p-4" style={{ width: "600px", border: '2px solid white', borderRadius: '10px' }}>
         <h1 className='text-center'>User Login</h1>
         <form onSubmit={submitHandler} className='my-3'>
         
