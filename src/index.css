@@ -50,12 +50,16 @@ body::-webkit-scrollbar{
   padding:10px;
   width: 220px;
 }
+
+.search_bar span{
+width: 10%;
+}
  
 .search_bar input{
   border: none;
   background-color: black;
   color: white;
-  width: 200px;
+  width: 90%;
 }
 
 .search_bar input::placeholder{
@@ -75,7 +79,7 @@ body::-webkit-scrollbar{
   background-color: rgb(51, 46, 55);
 }
 
-@media (max-width: 991px) {
+@media (max-width: 768px) {
   .sub_bar {
     display: none;
   }
