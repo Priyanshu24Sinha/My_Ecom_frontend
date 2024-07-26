@@ -7,7 +7,7 @@ const ProductDetailss = () => {
 
     const {id} = useParams()
 
-    const url="http://localhost:1000/api"
+    const url="https://my-ecom-api.onrender.com/api"
 
 
     const [product, setProduct] = useState()
